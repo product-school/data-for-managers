@@ -1,0 +1,200 @@
+<!--adapted from GDI (https://github.com/girldevelopit/gdi-featured-php-mysql)-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>SQL Class 1</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/simple.css">
+    <link rel="stylesheet" href="lib/css/dark.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <!-- Opening slide -->
+        <section>
+          <section>
+            <img src="https://www.productschool.com/wp-content/uploads/2015/07/product-school-logo.png" alt="PS Logo" class="noborder" style="max-height:400px;">
+            <h3>SQL</h3>
+            <h4>Class 1</h4>
+          </section>
+        </section>
+
+        <!-- Introduction -->
+        <section id="intro">
+          <section>
+            <h3>What is SQL?</h3>
+            <p>Structured Query Language</p>
+            <ol>
+              <li><span class="blue">SQL is a programming language</span></li>
+              <li><span class="blue">Used by almost any company you can think of to store/retrieve data</span></li>
+              <li><span class="blue">SQL provides a powerful interface to write/read data into a database</li>
+            </ol>
+          </section>
+        </section>
+
+        <!-- What Are Databases-->
+        <section>
+          <section>
+            <h3>A database is a way to store information...</h3>
+            <img src="img/file-cabinet.jpg" alt="File cabinet"/>
+            <!--<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/victoriabernal/6294851265/" target="_blank">victoriabernal</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>-->
+          </section>
+          <section>
+            <h3>...and link it together</h3>
+            <img src="img/daisy-chain.jpg" alt="Daisy chain"/>
+            <!--<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/55919472@N00/3538996117/" target="_blank">skittledog</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>-->
+          </section>
+          <section>
+            <h3>Data are stored in linked tables</h3>
+            <img src="img/chained-tables.jpg" alt="Tables attached by a chain"/>
+            <!--<p class="credit">Photo credit: <a href="http://www.flickr.com/photos/leithcote/4240469304/" target="_blank">Antony Oliver</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>-->
+          </section>
+          <section>
+            <h3>Instead of one giant, repetitive table...</h3>
+            <img src="img/large-table.png" alt="One big table for checkouts, books, and patron names"/>
+          </section>
+          <section>
+            <h3>...you break things into smaller tables</h3>
+            <img src="img/small-tables.png" alt="Seperate tables for patron, books, and checkout, linked by ID number"/>
+          </section>
+          <section>
+            <h3>Why?</h3>
+            <ul>
+              <li>Thoroughness</li>
+              <li>Consistency</li>
+              <li>Avoiding human error</li>
+              <li>Working with dynamic content</li>
+            </ul>
+          </section>
+        </section>
+
+        <!--Using MySQL-->
+        <section>
+          <section>
+            <h3>What is MySQL?</h3>
+            <ul>
+              <li>A flavor of SQL</li>
+              <li>A relational database</li>
+              <li>Query-driven</li>
+            </ul>
+          </section>
+          <section>
+            <h3>MySQL data types</h3>
+            <ul>
+              <li>VARCHAR - String up to 256 characters</li>
+              <li>INT - Integer of up to 11 characters</li>
+              <li>FLOAT - Decimal of any size</li>
+              <li>TEXT - Large amounts of text, no limit in size</li>
+              <li>DATE / TIME - date entries with specific formats</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Working with MySQL</h3>
+            <p>Most relational databases, including MySQL, use a language called SQL (Structured Query Language). Here are some basic commands:</p>
+            <ul>
+              <li>SELECT - get data from a database table</li>
+              <li>UPDATE - change data in a database table</li>
+              <li>DELETE - remove data from a database table</li>
+              <li>INSERT INTO - insert new data in a database tab</li>
+            </ul>
+          </section>
+        </section>
+
+        <!--Walk through/Tutorial-->
+        <section>
+          <section>
+            <h3>Walkthrough</h3>
+            <p>We will create a database for a coffee shop</p>
+            <img src="img/coffee.jpg" alt="Cup of coffee"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/ahmedrabea/274197870/" target="_blank">Ahmed Rabea</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>Let's create it</h3>
+            <p>Let's create our first database. Start up Cloud9 <p>
+          </section>
+          <section>
+            <h3>Start MySQL</h3>
+            <pre>
+              <code class="sql">some command to start MySQL</code>
+            </pre>
+          </section>
+          <section>
+            <h3>Start the MySQL command line interface (CLI)</h3>
+            <pre>
+              <code class="sql">some command to start the CLI</code>
+            </pre>
+          </section>
+          <section>
+            <h3>Select your database</h3>
+            <pre><code class="sql">USE c9; </code></pre>
+          </section>
+          <section>
+            <h3>Create a table called "product"</h3>
+            <pre><code class="sql">CREATE TABLE product (
+              productID int,
+              company varchar(255),
+              type varchar(255),
+              roast varchar(255),
+              description text
+            );</code></pre>
+          </section>
+        </section>
+
+        <!-- Final slides-->
+        <section id="final">
+          <section>
+            <h3>You did it!</h3>
+            <img src="img/fireworks.jpg" alt="Cup of coffee"/>
+            <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/markwdw85/9425240584/" target="_blank">Mark W.</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+          </section>
+          <section>
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="http://www.sqlzoo.net" target="_blank">SQL Zoo</a>, a great guide to SQL.
+              <li><a href="http://www.w3schools.com/sql/default.asp" target="_blank">W3Schools SQL Tutorial</a>, another guide to basic SQL.
+            </ul>
+          </section>
+        </section>
+
+      </div>
+      <footer>
+        <div class="copyright">
+          SQL ~ Product School
+        </div>
+      </footer>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
+    <script>
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
+    </script>
+  </body>
+</html>
